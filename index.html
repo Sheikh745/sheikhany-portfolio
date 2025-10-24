@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sheikh Any — Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #111317;
+      --muted: #8892b0;
+      --text: #e6f1ff;
+      --accent: #64ffda;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 28px; }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 24px;
+      padding: 32px 0 12px;
+      border-bottom: 1px solid #1f2430;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                  url("assets/header-bg.jpg") center/cover no-repeat;
+      border-radius: 12px;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1f2430;
+    }
+
+    .header-text { display: flex; flex-direction: column; gap: 10px; }
+
+    .name {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
+    }
+
+    .tag { color: var(--muted); }
+
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+
+    .btn {
+      background: #0f172a;
+      border: 1px solid #233044;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #0b0c10;
+      box-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
+    }
+
+    section { padding: 40px 0; border-bottom: 1px solid #1f2430; }
+
+    h2 { font-size: 22px; margin-bottom: 8px; }
+
+    .muted { color: var(--muted); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #1a1f29;
+      padding: 16px;
+      border-radius: 14px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid #223047;
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin: 6px 6px 0 0;
+      font-size: 14px;
+    }
+
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 12px rgba(100, 255, 218, 0.3);
+    }
+
+    footer { padding: 28px 0; text-align: center; }
+    .small { font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic" />
+      <div class="header-text">
+        <div class="name">Sheikh Any</div>
+        <div class="tag">BSc (Hons) Computer Science (AI) — Brunel University London</div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#experience">Experience</a>
+          <a class="btn" href="#education">Education</a>
+          <a class="btn" href="#certifications">Certifications</a>
+          <a class="btn" href="assets/Sheikh_Any_CV.pdf">Download CV</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About</h2>
+
+      <p>
+        I’m a <strong>Computer Science (AI)</strong> student at <strong>Brunel University London</strong>, passionate about building intelligent, user-focused applications that connect data science with real-world impact. My technical expertise includes <strong>Java</strong>, <strong>React</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong>, alongside experience in <strong>AI model development</strong>, <strong>data analysis</strong>, and <strong>full-stack web systems</strong>.
+      </p>
+
+      <p>
+        I’m currently developing my Final Year Project — <strong>AirSafe</strong>, a mobile-based <strong>AI-powered weather and health risk prediction app</strong> that integrates environmental APIs with machine-learning models to forecast potential health risks caused by air quality, pollen, and temperature changes.
+      </p>
+
+      <p>
+        Previously, as an <strong>Edge AI Engineering Intern at ArbaLabs (ArbaEdge Programme)</strong>, I built backend prototypes for AI model verification and secure data handling pipelines. I’ve also explored robotics integration through the <strong>Raspberry Pi Swiftbot navigation system</strong> and led both frontend and backend development for a <strong>mental wellness platform (MindMate)</strong> using <strong>Agile Scrum</strong> methodology.
+      </p>
+
+      <p>
+        I thrive in collaborative, fast-paced environments where I can learn continuously and apply AI for social good. My long-term goal is to become a <strong>software engineer who develops human-centric intelligent solutions</strong> that improve quality of life.
+      </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <div>
+          <span class="pill">Java</span>
+          <span class="pill">C++</span>
+          <span class="pill">Python</span>
+          <span class="pill">R (Data & ML)</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">React</span>
+          <span class="pill">Spring Boot</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">MSSQL</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">Git / GitHub</span>
+          <span class="pill">Agile / Scrum</span>
+          <span class="pill">Data Visualization</span>
+          <span class="pill">Machine Learning (Basics)</span>
+          <span class="pill">UI/UX Principles</span>
+        </div>
+
+        <br />
+
+        <h3>Soft Skills</h3>
+        <div>
+          <span class="pill">Problem Solving</span>
+          <span class="pill">Communication</span>
+          <span class="pill">Teamwork</span>
+          <span class="pill">Adaptability</span>
+          <span class="pill">Attention to Detail</span>
+          <span class="pill">Time Management</span>
+          <span class="pill">Leadership</span>
+          <span class="pill">Critical Thinking</span>
+          <span class="pill">Project Coordination</span>
+          <span class="pill">Self-Motivation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>MindMate — Weekly Wellness Polls</strong>
+          <div class="muted">React · Spring Boot · MSSQL</div>
+          <img src="assets/mindmate-weeklypolls.jpg" alt="MindMate Weekly Wellness Polls" class="project-img" />
+          <p>Developed and integrated the Weekly Wellness Polls feature with frontend and backend synchronization. Implemented UI components, API endpoints, and database interactions using Agile methodology.</p>
+        </div>
+
+        <div class="card">
+          <strong>AirSafe — Weather & Health Risk Prediction App (Ongoing FYP)</strong>
+          <div class="muted">Python · R · Android · AI · APIs</div>
+          <p>Developing an AI-driven mobile app that predicts short-term health risks using weather and air-quality data. Integrated APIs, preprocessing pipelines, and machine-learning models to generate hourly and daily predictions with user insights.</p>
+        </div>
+
+        <div class="card">
+          <strong>Raspberry Pi Swiftbot — Java Navigation System</strong>
+          <div class="muted">Java · Algorithms · Pathfinding</div>
+          <img src="assets/Swiftbot.jpg" alt="Raspberry Pi Swiftbot Project" class="project-img" />
+          <p>Developed a Java-based navigation system for the Raspberry Pi Swiftbot, optimizing traversal and pathfinding across diverse environments. Collaborated with teammates to integrate navigation into the system architecture.</p>
+        </div>
+
+        <div class="card">
+          <strong>Simon Game — Command-Line Interface</strong>
+          <div class="muted">Java · Team Project · Algorithm Design</div>
+          <img src="assets/Simon game.jpg" alt="Simon Game Project" class="project-img" />
+          <p>Designed and implemented a command-line version of the classic Simon memory game using Java. Created algorithms, flowcharts, and pseudocode to structure gameplay logic, highlighting teamwork, problem-solving, and time management skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + FOOTER -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>📞 Phone: +44 7432 452059</p>
+        <p>✉️ Email: <a href="mailto:sheikhany123@gmail.com">sheikhany123@gmail.com</a></p>
+        <p>🌍 LinkedIn: <a href="https://www.linkedin.com/in/sheikh-a-46556829a">linkedin.com/in/sheikh-a-46556829a</a></p>
+        <p>💻 GitHub: <a href="https://github.com/Sheikh745">github.com/Sheikh745</a></p>
+        <p>📍 Location: London, UK</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="y"></span> Sheikh Any — Built with HTML/CSS. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
