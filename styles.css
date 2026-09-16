@@ -369,7 +369,10 @@ p { font-size: 1rem; }
 
 .project-featured .project-img {
   aspect-ratio: auto;
+  object-fit: contain;
   object-position: center;
+  padding: 20px;
+  background: #f4f8fc;
 }
 
 .project-featured .project-content {
@@ -391,6 +394,43 @@ p { font-size: 1rem; }
 
 .project-highlights li { margin-bottom: 7px; }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  background: var(--navy);
+  color: #ffffff;
+  border: 1px solid var(--navy);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+
+.project-link:hover {
+  background: var(--navy-soft);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.secondary-link {
+  background: transparent;
+  color: var(--navy);
+}
+
+.secondary-link:hover {
+  background: var(--accent-soft);
+  color: var(--navy);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -410,8 +450,48 @@ p { font-size: 1rem; }
 
 .project-grid .project-content > p:last-child { margin-top: auto; }
 
+/* Leadership and professional development */
+.development-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.development-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.development-card h3 {
+  margin: 8px 0 2px;
+  font-size: 1.35rem;
+}
+
+.development-card > p {
+  margin-top: 16px;
+}
+
+.development-card .project-tech {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
 #education .card p { margin-top: 10px; }
 .certificate-card .btn { margin-top: 18px; }
+
+.ey-training-summary {
+  margin-top: 22px;
+  background: radial-gradient(circle at 100% 0%, rgba(22, 198, 176, 0.12), transparent 18rem), var(--surface);
+}
+
+.ey-training-summary h3 {
+  margin: 8px 0 6px;
+}
+
+.ey-training-summary p {
+  max-width: 850px;
+  color: #334261;
+}
 
 .contact-card {
   padding: clamp(30px, 5vw, 54px);
@@ -421,6 +501,13 @@ p { font-size: 1rem; }
 
 .contact-card p { max-width: 680px; margin: 14px auto 0; }
 .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 22px 0 16px; }
+
+footer {
+  padding: 30px 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
 
 @media (min-width: 860px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -439,6 +526,7 @@ p { font-size: 1rem; }
   .project-featured { grid-template-columns: 1fr; }
   .project-featured .project-img { aspect-ratio: 16 / 10; }
   .project-grid { grid-template-columns: 1fr; }
+  .development-grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 761px) and (max-width: 1050px) {
