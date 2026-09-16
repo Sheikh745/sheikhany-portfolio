@@ -170,3 +170,15 @@
       font-size: 13px;
       color: var(--muted);
     }
+
+    .experience-list {
+  padding-left: 22px;
+  margin-top: 14px;
+}
+
+.experience-list li {
+  margin-bottom: 8px;
+}
+#experience .card + .card {
+  margin-top: 16px;
+}
