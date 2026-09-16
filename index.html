@@ -3,197 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sheikh Any — Portfolio</title>
-  <style>
-    :root {
-      --bg: #0b0c10;
-      --card: #111317;
-      --muted: #8892b0;
-      --text: #e6f1ff;
-      --accent: #64ffda;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .wrap {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 28px;
-    }
-
-    /* ✅ Dark overlay added on header background */
-    header {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 32px 0 12px;
-      border-bottom: 1px solid #1f2430;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      background: url("assets/header-bg.jpg") center/cover no-repeat;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6); /* 60% dark overlay */
-      z-index: 1;
-    }
-
-    header > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #1f2430;
-    }
-
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .name {
-      font-size: 34px;
-      font-weight: 800;
-    }
-
-    .tag {
-      color: var(--muted);
-    }
-
-    .cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .btn {
-      background: #0f172a;
-      border: 1px solid #233044;
-      color: var(--text);
-      padding: 8px 14px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: var(--accent);
-      color: #0b0c10;
-    }
-
-    section {
-      padding: 40px 0;
-      border-bottom: 1px solid #1f2430;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid #1a1f29;
-      padding: 16px;
-      border-radius: 14px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    @media (min-width: 860px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .pill {
-      display: inline-block;
-      border: 1px solid #223047;
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin: 6px 6px 0 0;
-      font-size: 14px;
-    }
-
-    .project-img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    #about p {
-      margin-bottom: 18px;
-    }
-
-    footer {
-      padding: 28px 0;
-      text-align: center;
-    }
-
-    .small {
-      font-size: 13px;
-      color: var(--muted);
-    }
-  </style>
+  <meta
+    name="description"
+    content="Sheikh Any is a Computer Science (AI) graduate building reliable software, full-stack applications, and applied AI solutions."
+  />
+  <title>Sheikh Any | Software Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#about">Skip to main content</a>
   <div class="wrap">
-    <header>
-      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="#top">SA</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header id="top">
+      <div class="profile-frame">
+        <img src="assets/profile.jpg" alt="Portrait of Sheikh Any" class="profile-pic" />
+      </div>
       <div class="header-text">
-        <div class="name">Sheikh Any</div>
-        <div class="tag">BSc (Hons) Computer Science (AI) — Brunel University London</div>
+        <div class="eyebrow">Hello, I’m</div>
+        <h1 class="name">Sheikh Any</h1>
+        <p class="tag">Graduate Software Engineer</p>
+        <p class="hero-summary">
+          Computer Science (AI) graduate building reliable software,
+          full-stack applications, and practical AI solutions.
+        </p>
         <div class="cta">
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="#projects">Projects</a>
-          <a class="btn" href="#experience">Experience</a>
-          <a class="btn" href="#education">Education</a>
-          <a class="btn" href="#certifications">Certifications</a>
-          <a class="btn" href="assets/Sheikh_Any_CV.pdf" target="_blank">Download CV</a>
-        </div>
+  <a class="btn primary-btn" href="#projects">
+    View Projects
+  </a>
+
+  <a
+    class="btn"
+    href="https://github.com/Sheikh745"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    GitHub
+  </a>
+
+  <a
+    class="btn"
+    href="assets/Sheikh_Any_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download CV
+  </a>
+</div>
       </div>
     </header>
 
@@ -201,149 +68,405 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        I’m a <strong>Computer Science (AI)</strong> student at <strong>Brunel University London</strong>, passionate about building intelligent, user-focused applications that connect data science with real-world impact. My technical expertise includes <strong>Java, React, Spring Boot,</strong> and <strong>MySQL,</strong> alongside experience in <strong>AI model development, data analysis,</strong> and <strong>full-stack web systems.</strong>
+        I’m a <strong>Computer Science (Artificial Intelligence) graduate</strong> from
+        <strong>Brunel University London</strong>, with hands-on experience in
+        <strong>software development, applied AI, data analysis, APIs,</strong> and
+        <strong>full-stack applications.</strong>
       </p>
-
+      
       <p>
-        I’m currently developing my Final Year Project — <strong>AirSafe</strong>, a mobile-based <strong>AI-powered weather and health risk prediction app</strong> that integrates environmental APIs with machine-learning models to forecast potential health risks caused by air quality, pollen, and temperature changes.
+        During my <strong>Tax Technology internship at EY</strong>, I contributed to an
+        AI-powered iXBRL review solution by translating specialist requirements into
+        Python-based analysis, validation, and comparison capabilities. I also completed
+        an <strong>Edge AI Engineering internship at ArbaLabs</strong>, where I worked on
+        backend prototypes for AI model verification and secure data handling.
       </p>
-
+      
       <p>
-        Previously, as an <strong>Edge AI Engineering Intern at ArbaLabs (ArbaEdge Programme)</strong>, I built backend prototypes for AI model verification and secure data handling pipelines. I’ve also explored robotics integration through the <strong>Raspberry Pi Swiftbot navigation system</strong> and led both frontend and backend development for a <strong>mental wellness platform (MindMate)</strong> using <strong>Agile Scrum</strong> methodology.
-      </p>
-
-      <p>
-        I thrive in collaborative, fast-paced environments where I can learn continuously and apply AI for social good. My long-term goal is to become a <strong>software engineer who develops human-centric intelligent solutions</strong> that improve quality of life.
+        My projects include the <strong>AeroAlert health-risk prediction app</strong>,
+        the <strong>MindMate full-stack wellness platform</strong>, and a
+        <strong>Java navigation system for the Raspberry Pi SwiftBot</strong>. I’m now
+        seeking graduate software engineering opportunities where I can build reliable,
+        user-focused software and continue developing my technical skills.
+      
       </p>
     </section>
+
 
     <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <span class="pill">Java</span><span class="pill">C++</span><span class="pill">Python</span><span class="pill">R (Data & ML)</span>
-        <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">React</span>
-        <span class="pill">Spring Boot</span><span class="pill">MySQL</span><span class="pill">MSSQL</span><span class="pill">Git / GitHub</span>
-        <span class="pill">Agile / Scrum</span><span class="pill">REST APIs</span><span class="pill">Data Visualization</span>
-      </div><br />
-      <div class="card">
-        <h3>Soft Skills</h3>
-        <span class="pill">Problem Solving</span><span class="pill">Communication</span><span class="pill">Teamwork</span>
-        <span class="pill">Adaptability</span><span class="pill">Attention to Detail</span><span class="pill">Time Management</span>
-        <span class="pill">Leadership</span><span class="pill">Critical Thinking</span><span class="pill">Project Coordination</span><span class="pill">Self-Motivation</span>
-      </div>
-    </section>
+     <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="grid">
+    <div class="card">
+      <h3>Programming Languages</h3>
+      <span class="pill">Python</span>
+      <span class="pill">Java</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">SQL</span>
+      <span class="pill">C++</span>
+      <span class="pill">R</span>
+    </div>
+
+    <div class="card">
+      <h3>Frontend Development</h3>
+      <span class="pill">React</span>
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">Responsive Design</span>
+    </div>
+
+    <div class="card">
+      <h3>Backend & APIs</h3>
+      <span class="pill">Spring Boot</span>
+      <span class="pill">FastAPI</span>
+      <span class="pill">REST APIs</span>
+      <span class="pill">JSON</span>
+    </div>
+
+    <div class="card">
+      <h3>AI & Data</h3>
+      <span class="pill">Machine Learning</span>
+      <span class="pill">Random Forest</span>
+      <span class="pill">Data Analysis</span>
+      <span class="pill">Data Visualisation</span>
+    </div>
+
+    <div class="card">
+      <h3>Databases</h3>
+      <span class="pill">MySQL</span>
+      <span class="pill">Microsoft SQL Server</span>
+    </div>
+
+    <div class="card">
+      <h3>Tools & Practices</h3>
+      <span class="pill">Git</span>
+      <span class="pill">GitHub</span>
+      <span class="pill">Agile</span>
+      <span class="pill">Scrum</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="card">
+    <h3>AI Tax Technology Transformation Intern</h3>
+    <div class="muted">EY · Canary Wharf, London | July 2026 – August 2026</div>
+
+    <ul class="experience-list">
+      <li>
+        Developed a Python-based AI review agent to support the first-pass
+        review of iXBRL statutory accounts.
+      </li>
+      <li>
+        Built workflows to extract and transform iXBRL data, compare current
+        and prior-year filings, and produce evidence and exception reports.
+      </li>
+      <li>
+        Supported filing analysis, tagging validation, comparison, and
+        technical checks with human oversight of AI-generated outputs.
+      </li>
+      <li>
+        Gathered requirements from Corporate Tax SMEs and iXBRL specialists
+        and translated their review processes into software capabilities.
+      </li>
+      <li>
+        Tested and improved the solution using stakeholder feedback and
+        communicated progress through demonstrations and documentation.
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+  <h3>Edge AI Engineering Intern</h3>
+  <div class="muted">
+    ArbaLabs · ArbaEdge Programme · Remote | June 2025 – July 2025
+  </div>
+
+  <ul class="experience-list">
+    <li>
+      Contributed to ArbaEdge, a system designed to verify the authenticity
+      of AI models and outputs from drones and satellites.
+    </li>
+    <li>
+      Built Python backend prototypes to generate and log SHA-256 hashes,
+      simulate validation workflows, and support future device integration.
+    </li>
+    <li>
+      Applied SHA-256 hashing, secure logging, and offline trust mechanisms
+      to validate image and AI model files.
+    </li>
+    <li>
+      Participated in Agile check-ins and collaborated with ArbaLabs and
+      Pagoda Projects mentors.
+    </li>
+  </ul>
+</div>
+</section>
 
     <!-- PROJECTS -->
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-      <div class="card">
-          <img src="assets/aeroalert.jpg" class="project-img" alt="AeroAlert">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Selected work</span>
+          <h2>Projects</h2>
+        </div>
+        <p>
+          Applied AI, full-stack development, and Java projects built through
+          university work and team collaboration.
+        </p>
+      </div>
 
-          <strong>AeroAlert – AI-Powered Health Risk Prediction App</strong>
-          <div class="muted">Mobile App · AI · Machine Learning · FastAPI</div>
+      <article class="card project-card project-featured">
+        <div class="project-media">
+          <img
+            src="assets/aeroalert.jpg"
+            class="project-img"
+            alt="Three AeroAlert mobile screens showing the health dashboard and symptom check"
+          />
+        </div>
+
+        <div class="project-content">
+          <span class="project-label">Featured · Final-year project</span>
+          <h3>AeroAlert</h3>
+          <p class="project-subtitle">
+            AI-driven respiratory health-risk prediction
+          </p>
+
+          <div class="project-tech" aria-label="Technologies used">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Python</span>
+            <span>R</span>
+            <span>Machine Learning</span>
+          </div>
 
           <p>
-        Developed <strong>AeroAlert</strong>, an AI-powered mobile application that predicts respiratory health risks using real-time environmental data such as air quality, temperature, and humidity.
-        Implemented a hybrid system combining rule-based logic and a machine learning model (Random Forest) for accurate risk classification.
-        Integrated an AI assistant (AeroAssist) to provide personalised health insights and recommendations.
-       </p>
-       </div>
+            Built an application that combines weather and air-quality data to
+            predict personalised respiratory health risks and present practical
+            insights through a mobile-first dashboard.
+          </p>
 
-        <div class="card">
-          <img src="assets/mindmate-weeklypolls.jpg" class="project-img" alt="MindMate Project">
-          <strong>MindMate — Weekly Wellness Polls</strong>
-          <div class="muted">React · Spring Boot · MSSQL</div>
-          <p>Developed and integrated the Weekly Wellness Polls feature with frontend and backend synchronization. Implemented UI components, API endpoints, and database interactions using Agile methodology.</p>
+          <ul class="project-highlights">
+            <li>Prepared and analysed environmental and health-related data.</li>
+            <li>Applied classification and regression models to generate risk predictions.</li>
+            <li>Evaluated model performance and presented trends through React and TypeScript.</li>
+          </ul>
         </div>
+      </article>
 
-        <div class="card">
-          <img src="assets/Swiftbot.jpg" class="project-img" alt="Swiftbot Project">
-          <strong>Raspberry Pi Swiftbot — Java Navigation System</strong>
-          <div class="muted">Java · Algorithms · Pathfinding</div>
-          <p>Developed a Java-based navigation system for the Raspberry Pi Swiftbot, optimizing traversal and pathfinding across diverse environments. Collaborated with teammates to integrate navigation into the system architecture.</p>
-        </div>
+      <div class="project-grid">
+        <article class="card project-card">
+          <img
+            src="assets/mindmate-weeklypolls.jpg"
+            class="project-img"
+            alt="MindMate weekly wellness polls web application"
+          />
 
-        <div class="card">
-          <img src="assets/Simon game.jpg" class="project-img" alt="Simon Game">
-          <strong>Simon Game — Command-Line Interface</strong>
-          <div class="muted">Java · Team Project · Algorithm Design</div>
-          <p>Designed and implemented a command-line version of the Simon memory game using Java. Created algorithms, flowcharts, and pseudocode to structure gameplay logic, highlighting teamwork, problem-solving, and time management skills.</p>
-        </div>
+          <div class="project-content">
+            <span class="project-label">Team project · Full stack</span>
+            <h3>MindMate</h3>
+            <p class="project-subtitle">Wellness platform and weekly polls</p>
 
+            <div class="project-tech" aria-label="Technologies used">
+              <span>React</span>
+              <span>Spring Boot</span>
+              <span>REST APIs</span>
+              <span>MySQL</span>
+            </div>
 
+            <p>
+              Developed the Weekly Wellness Polls feature across the user
+              interface, API layer, and database while collaborating through
+              GitHub and Agile Scrum.
+            </p>
+          </div>
+        </article>
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <strong>Brunel University London</strong> — BSc (Hons) Computer Science (AI)
-        <div class="muted">Sept 2023 – Present</div>
-      </div>
-      <div class="card">
-        <strong>Newham College London</strong> — Access to HE Diploma (IT), Distinction
-        <div class="muted">Sept 2021 – July 2022</div>
+        <article class="card project-card">
+          <img
+            src="assets/Swiftbot.jpg"
+            class="project-img"
+            alt="Raspberry Pi SwiftBot used for the Java navigation project"
+          />
+
+          <div class="project-content">
+            <span class="project-label">Robotics · Java</span>
+            <h3>SwiftBot Navigation</h3>
+            <p class="project-subtitle">Autonomous navigation system</p>
+
+            <div class="project-tech" aria-label="Technologies used">
+              <span>Java</span>
+              <span>OOP</span>
+              <span>Algorithms</span>
+              <span>Pathfinding</span>
+            </div>
+
+            <p>
+              Designed and improved navigation logic for efficient traversal
+              and accurate movement, then integrated the component into the
+              wider team system.
+            </p>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <img
+            src="assets/Simon game.jpg"
+            class="project-img"
+            alt="Simon memory game controller representing the Java team project"
+          />
+
+          <div class="project-content">
+            <span class="project-label">Team project · Leadership</span>
+            <h3>Simon Game</h3>
+            <p class="project-subtitle">Command-line memory game</p>
+
+            <div class="project-tech" aria-label="Technologies used">
+              <span>Java</span>
+              <span>CLI</span>
+              <span>Algorithms</span>
+              <span>Pseudocode</span>
+            </div>
+
+            <p>
+              Led the implementation of the command-line game logic within an
+              eight-person team using algorithms, flowcharts, and pseudocode.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
+  
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>R for Data Science: Analysis and Visualization</strong>
-          <div class="muted">LinkedIn Learning · Oct 2025</div>
-          <a href="assets/Certificate_RforDataScience.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-        <div class="card">
-          <strong>Design Thinking: Implementing the Process</strong>
-          <div class="muted">LinkedIn Learning · Oct 2025</div>
-          <a href="assets/Certificate_DesignThinking.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-        <div class="card">
-          <strong>IBM Consulting Associates Insights Session</strong>
-          <div class="muted">IBM UK · Oct 2024</div>
-          <a href="assets/IBM_Consulting_Associates_Insights_Session.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-        <div class="card">
-          <strong>READY Programme 2024–25 — Employability Skills</strong>
-          <div class="muted">Brunel University London · Dec 2024</div>
-          <a href="assets/READYProgamme.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-        <div class="card">
-          <strong>Pagoda Projects Internship Certificate</strong>
-          <div class="muted">Pagoda Projects · Aug 2025</div>
-          <a href="assets/pagoda-projects-certificate-sheikh-any.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-        <div class="card">
-          <strong>Access to HE Diploma (Information Technology)</strong>
-          <div class="muted">Newham College · Jul 2022</div>
-          <a href="assets/Access_Diploma.pdf" class="btn" target="_blank">View Certificate</a>
-        </div>
-      </div>
-    </section>
+  <!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>📞 Phone: +44 7432 452059</p>
-        <p>✉️ Email: <a href="mailto:sheikhany123@gmail.com">sheikhany123@gmail.com</a></p>
-        <p>🌍 LinkedIn: <a href="https://www.linkedin.com/in/sheikh-a-46556829a">linkedin.com/in/sheikh-a-46556829a</a></p>
-        <p>💻 GitHub: <a href="https://github.com/Sheikh745">github.com/Sheikh745</a></p>
-        <p>📍 Location: London, UK</p>
-      </div>
-    </section>
+  <div class="grid">
+    <div class="card">
+      <h3>BSc (Hons) Computer Science (Artificial Intelligence)</h3>
+      <div class="muted">Brunel University London | 2023 – 2026</div>
 
-    <footer>
-      <div class="small">© <span id="y"></span> Sheikh Any — Built with HTML/CSS. All rights reserved.</div>
-    </footer>
+      <p>
+        Relevant study included Software Engineering, Artificial Intelligence,
+        Algorithms, Cyber Security, Networks and Operating Systems, and Software
+        Development and Management.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Access to Higher Education Diploma in IT</h3>
+      <div class="muted">Newham College London | Completed July 2022</div>
+
+      <p>
+        Achieved Distinction and developed the academic and technical foundation
+        required to progress to university-level computer science.
+      </p>
+    </div>
   </div>
+</section>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- CERTIFICATIONS -->
+<section id="certifications">
+  <h2>Selected Certifications</h2>
+
+  <div class="grid">
+    <div class="card certificate-card">
+      <h3>React Essential Training</h3>
+      <div class="muted">LinkedIn Learning · January 2026</div>
+      <a
+        href="assets/React_Essential_Training.pdf"
+        class="btn"
+        target="_blank"
+      >
+        View Certificate
+      </a>
+    </div>
+
+    <div class="card certificate-card">
+      <h3>R for Data Science: Analysis and Visualisation</h3>
+      <div class="muted">LinkedIn Learning · October 2025</div>
+      <a
+        href="assets/Certificate_RforDataScience.pdf"
+        class="btn"
+        target="_blank"
+      >
+        View Certificate
+      </a>
+    </div>
+
+    <div class="card certificate-card">
+      <h3>Design Thinking: Implementing the Process</h3>
+      <div class="muted">LinkedIn Learning · October 2025</div>
+      <a
+        href="assets/Certificate_DesignThinking.pdf"
+        class="btn"
+        target="_blank"
+      >
+        View Certificate
+      </a>
+    </div>
+
+    <div class="card certificate-card">
+      <h3>Edge AI Engineering Internship Certificate</h3>
+      <div class="muted">Pagoda Projects · August 2025</div>
+      <a
+        href="assets/pagoda-projects-certificate-sheikh-any.pdf"
+        class="btn"
+        target="_blank"
+      >
+        View Certificate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card contact-card">
+    <h3>Let’s Connect</h3>
+
+    <p>
+      I’m open to graduate software engineering and technology opportunities
+      where I can contribute to meaningful products, learn from experienced
+      teams, and continue developing as a software engineer.
+    </p>
+
+    <div class="contact-links">
+      <a class="btn" href="mailto:sheikhany123@gmail.com">
+        Email Me
+      </a>
+
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/sheikh-a-46556829a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        class="btn"
+        href="https://github.com/Sheikh745"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </div>
+
+    <div class="muted">
+      Based in London, United Kingdom
+    </div>
+  </div>
+</section>
+  </div>
 </body>
 </html>
