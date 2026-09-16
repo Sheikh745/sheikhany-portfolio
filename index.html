@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Sheikh Any is a Computer Science (AI) graduate building reliable software, full-stack applications, and applied AI solutions."
+  />
   <title>Sheikh Any | Software Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-
 </head>
 <body>
+  <a class="skip-link" href="#about">Skip to main content</a>
   <div class="wrap">
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="nav-brand" href="#top">SA</a>
@@ -23,10 +27,17 @@
     </nav>
 
     <header id="top">
-      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic" />
+      <div class="profile-frame">
+        <img src="assets/profile.jpg" alt="Portrait of Sheikh Any" class="profile-pic" />
+      </div>
       <div class="header-text">
-        <div class="name">Sheikh Any</div>
-        <div class="tag">Computer Science (AI) Graduate | Software Engineering & Applied AI</div>
+        <div class="eyebrow">Hello, I’m</div>
+        <h1 class="name">Sheikh Any</h1>
+        <p class="tag">Graduate Software Engineer</p>
+        <p class="hero-summary">
+          Computer Science (AI) graduate building reliable software,
+          full-stack applications, and practical AI solutions.
+        </p>
         <div class="cta">
   <a class="btn primary-btn" href="#projects">
     View Projects
@@ -432,9 +443,6 @@
     </div>
   </div>
 </section>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
