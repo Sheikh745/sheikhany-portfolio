@@ -194,3 +194,8 @@
 #projects .card p + p {
   margin-top: 10px;
 }
+
+.certificate-card .btn {
+  display: inline-block;
+  margin-top: 14px;
+}
